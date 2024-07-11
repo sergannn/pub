@@ -55,6 +55,9 @@ getLocalStream().then((localMediaStream) => {
     myAudioVideoStream = localMediaStream;
     myVideoSample.srcObject = myAudioVideoStream;
     myVideo.srcObject = myAudioVideoStream;
+    username = myUsername;
+    usernameModal.classList.add(hide);
+    initWebRtcApp();
 }).catch(() => {
     myVideo.classList.add(hide);
     myVideoSample.classList.add(hide);
@@ -63,11 +66,11 @@ getLocalStream().then((localMediaStream) => {
 });
 
 // Prompt the user for a username input
-getLocalUserName().then((myUsername) => {
+/*getLocalUserName().then((myUsername) => {
     username = myUsername;
     usernameModal.classList.add(hide);
     initWebRtcApp();
-});
+});*/
 
 // Send a chat message when Enter key is pressed
 messageInput.addEventListener('keydown', (event) => {
