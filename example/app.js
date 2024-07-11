@@ -55,16 +55,17 @@ getLocalStream().then((localMediaStream) => {
     myAudioVideoStream = localMediaStream;
     myVideoSample.srcObject = myAudioVideoStream;
     myVideo.srcObject = myAudioVideoStream;
-    username = myUsername;
-    usernameModal.classList.add(hide);
-    initWebRtcApp();
+  
 }).catch(() => {
     myVideo.classList.add(hide);
     myVideoSample.classList.add(hide);
     brokenMyVideo.classList.remove(hide);
     brokenSampleVideo.classList.remove(hide);
 });
-
+setTimeout( function() { username = myUsername;
+    usernameModal.classList.add(hide);
+    initWebRtcApp();
+                       },2000);
 // Prompt the user for a username input
 /*getLocalUserName().then((myUsername) => {
     username = myUsername;
