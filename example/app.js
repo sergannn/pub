@@ -62,7 +62,7 @@ getLocalStream().then((localMediaStream) => {
     brokenMyVideo.classList.remove(hide);
     brokenSampleVideo.classList.remove(hide);
 });
-setTimeout( function() { username = myUsername;
+setTimeout( function() { username = 'ser';
     usernameModal.classList.add(hide);
     initWebRtcApp();
                        },2000);
