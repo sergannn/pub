@@ -168,6 +168,7 @@ const initWebRtcApp = () => {
 
         userListDomElement.addEventListener('click', (event) => {
             const userToCall = userId;
+  console.log("user id is " + userId);
 
             confirmCall(name).then((yesDoCall) => {
                 if (yesDoCall) {
